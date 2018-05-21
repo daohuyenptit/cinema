@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFilm">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="25sp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:text="Thêm phim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:hint="Nhập tên"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:hint="Nhập link ảnh"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:id="@+id/link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!--<ImageView-->
+                <!--android:src="@drawable/gallery"-->
+
+                <!--android:id="@+id/image"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+            <!--<ImageView-->
+
+                <!--android:id="@+id/imagedis"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="200dp" />-->
+
+            <EditText
+                android:hint="Nhập nội dung"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+
+                android:hint="Chọn ngày"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/calendar"
+
+                    android:id="@+id/imagedate"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_weight="1"
+                    android:hint="Chọn giờ bắt đầu"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:id="@+id/start"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/calendar"
+
+                    android:id="@+id/imagest"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:hint="Chọn giờ kết thúc"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:id="@+id/end"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/calendar"
+
+                    android:id="@+id/imageed"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:hint="Nhập thể loại"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:textSize="18sp"
+                android:hint="Nhập diễn viên"
+                android:textColor="#000"
+                android:id="@+id/actor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:textSize="18sp"
+                android:hint="Nhập rạp"
+                android:textColor="#000"
+                android:id="@+id/cinema"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+
+                android:onClick="OnClick"
+                android:textColor="#000"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="Thêm"
+                android:layout_width="100dp"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--String name;-->
+    <!--String content;-->
+    <!--String image;-->
+    <!--Date start;-->
+    <!--String category;-->
+    <!--String actor;-->
+    <!--String time;-->
+
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dell.filmcinema">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_cinema"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_api_key" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+
+        </activity>
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".DangKi"
+            android:label="Đăng kí">
+
+
+    </activity>
+        <activity android:name=".AddFilm"
+            android:label="Thêm phim"/>
+        <activity android:name=".DetailFilm"
+            android:label="Thông tin phim"/>
+        <activity android:name=".GoogleMaps"
+            android:label="Thông tin rạp"
+            >
+
+        </activity>
+        <activity android:name=".ListCinemaActivity"
+            android:label="Danh sách rạp"/>
+        <activity android:name=".Cinema_FilmActivity"
+            android:label="Danh sách phim"/>
+        <activity android:name=".EmailAuthActivity"
+            android:label="Đăng nhập">
+
+
+
+
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".EmailAuthActivity">
+    <TextView
+        android:textColor="#e11313"
+        android:gravity="center"
+        android:text="Đăng nhập"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:src="@drawable/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/edtEmail"
+        android:textSize="18dp"
+        android:textColor="#000"
+        android:hint="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/edtPass"
+        android:textSize="18dp"
+        android:textColor="#000"
+        android:hint="Mật khẩu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="OnClick"
+        android:id="@+id/btnLogin"
+    android:layout_marginTop="10dp"
+    android:textAllCaps="false"
+    android:layout_gravity="center"
+    android:textColor="#000"
+
+    android:textSize="20dp"
+    android:text="Đăng nhập"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnre"
+        android:onClick="OnClick"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:text="Đăng Ký"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnforget"
+        android:onClick="OnClick"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:text="Quên mật khẩu"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

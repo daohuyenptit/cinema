@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "645701813674",
+    "firebase_url": "https://filmcinema-41c57.firebaseio.com",
+    "project_id": "filmcinema-41c57",
+    "storage_bucket": "filmcinema-41c57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645701813674:android:417274e57b2fafd6",
+        "android_client_info": {
+          "package_name": "com.example.dell.filmcinema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645701813674-mcgb2qsl6u7si7ojhj3gc12kqaa3qqa2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dell.filmcinema",
+            "certificate_hash": "90b22028f935b0581003899b1a631eae8c816291"
+          }
+        },
+        {
+          "client_id": "645701813674-bn0am3ek1oa69cqukbt38d2qv64jse4r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMzxU1ITfTMXqVSsvmhVoxdiRWmpBvspg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645701813674-bn0am3ek1oa69cqukbt38d2qv64jse4r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
