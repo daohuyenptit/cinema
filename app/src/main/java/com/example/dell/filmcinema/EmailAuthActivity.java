@@ -141,7 +141,12 @@ public class EmailAuthActivity extends AppCompatActivity {
     public void OnClick(View view) {
         switch (view.getId()){
             case R.id.btnLogin:
-                signIn(edtEmail.getText().toString().trim(),edtPass.getText().toString().trim());
+                String email=edtEmail.getText().toString().trim();
+                String pass= edtPass.getText().toString().trim();
+                if (!Utils.validateForm(email,pass,getApplicationContext())){
+                    return;
+                }
+                signIn(email,pass);
                 break;
             case R.id.btnre:
                 startActivity(new Intent(EmailAuthActivity.this,DangKi.class));

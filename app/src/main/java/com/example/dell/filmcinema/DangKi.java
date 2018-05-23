@@ -53,7 +53,7 @@ public class DangKi extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        if (!validateForm(edtEamil.getText().toString().trim(),edtPass.getText().toString().trim())) {
+        if (!Utils.validateForm(edtEamil.getText().toString().trim(),edtPass.getText().toString().trim(),getApplicationContext())) {
             return;
         }
         final ProgressDialog progressDialog= ProgressDialog.show(this,"please wait...","Progressing....",true);
@@ -71,23 +71,5 @@ public class DangKi extends AppCompatActivity {
                 });
 
     }
-    private boolean validateForm(String email, String password) {
 
-        if (TextUtils.isEmpty(email)) {
-            Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-
-        if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-
-        if (password.length() < 6) {
-            Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-
-        return true;
-    }
 }

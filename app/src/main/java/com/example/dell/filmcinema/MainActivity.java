@@ -1,5 +1,6 @@
 package com.example.dell.filmcinema;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
         //set textview for header navigation
         View headerview= navigationView.getHeaderView(0);
+        checkPermission();
         txtusername=headerview.findViewById(R.id.txtusername);
         //get user email current
         if(FirebaseAuth.getInstance().getCurrentUser()!=null){
@@ -205,12 +207,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.main, menu);
+//        return true;
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -220,9 +222,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
 
         return super.onOptionsItemSelected(item);
@@ -250,10 +252,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 txtusername.setText("user@gmail.com");
             }
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -280,4 +278,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     break;
             }
         }
+    private void checkPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, 1001);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == 1001) {
+            if (grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                checkPermission();
+            }
+        }
+    }
+
 }

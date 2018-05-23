@@ -14,23 +14,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Button
-            android:textStyle="normal"
-            android:textAllCaps="false"
-            android:background="@drawable/button_click"
-            android:editable="false"
-            android:gravity="center"
 
-            android:clickable="true"
-            android:id="@+id/txtGiave"
-            android:onClick="onClick"
-            android:textColor="#000"
-
-            android:textSize="20dp"
-            android:text="Giá vé"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
         <Button
             android:textStyle="normal"
             android:textAllCaps="false"
@@ -42,29 +26,29 @@
             android:onClick="onClick"
             android:textColor="#000"
 
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:text="Suất chiếu"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="65dp" />
+
         <Button
-            android:textStyle="normal"
-            android:textAllCaps="false"
-            android:background="@drawable/button_click"
-            android:gravity="center"
-
-            android:editable="false"
             android:id="@+id/txtGoi"
-            android:onClick="onClick"
-            android:textColor="#000"
-
-            android:textSize="20dp"
-            android:text="Gọi"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="65dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_click"
+            android:onClick="onClick"
+            android:text="Gọi: 123456789"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="normal" />
 
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"/>
     <fragment
         android:id="@+id/myMap"
         android:name="com.google.android.gms.maps.MapFragment"
